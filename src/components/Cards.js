@@ -45,11 +45,11 @@ const Cards =()=> {
                         items[previous].status=''
                         setItems([...items])
                         setPrevious(-1)
-
                     }, 1000)
                 }
             }
-           
+      
+
         const handleClick=(id)=>{
             if(previous ===-1 ){
                 items[id].status='active'
@@ -58,11 +58,11 @@ const Cards =()=> {
                 check(id)
             }
         }
-        
+       
     return ( 
         <div className="cards">
             {items.map((item, index )=>(
-                <Card key={index} item={item} id={index} handleClick={handleClick}/>
+                <Card key={index} item={item} id={index} handleClick={handleClick} />
                 ))}
         </div>
      );
